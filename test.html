@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一份特别的奖状，给我最爱的你</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Zhi+Mang+Xing&display=swap');
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Noto Serif SC', serif;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            color: #5c3b3b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 2px solid #fff;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #d8527a;
+            margin-bottom: 15px;
+            letter-spacing: 5px;
+            position: relative;
+        }
+        
+        .header::before, .header::after {
+            content: '💖';
+            font-size: 0.5em;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .header::before {
+            left: -15px;
+        }
+
+        .header::after {
+            right: -15px;
+        }
+
+        .recipient {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            color: #c74b6f;
+            border-bottom: 2px dashed #f5a9b8;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .content {
+            font-size: 1.1em;
+            line-height: 2;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        
+        .award-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        
+        .award-list li {
+            background-color: #ffe8ee;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .award-list li:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(216, 82, 122, 0.2);
+        }
+
+        .prize-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff0f3;
+            border: 2px solid #ffb8c9;
+            border-radius: 15px;
+        }
+
+        .prize-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #d8527a;
+            margin-bottom: 15px;
+        }
+        
+        .alipay-command {
+            background-color: #d8527a;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 1.4em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .alipay-command:hover {
+            background-color: #c74b6f;
+        }
+
+        .alipay-instruction {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .signature {
+            margin-top: 40px;
+            text-align: right;
+            font-family: 'Zhi Mang Xing', cursive;
+            font-size: 1.8em;
+            color: #5c3b3b;
+        }
+        
+        .signature p {
+            margin: 5px 0;
+        }
+
+        .date {
+            font-size: 0.8em;
+            font-family: 'Noto Serif SC', serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="header">最佳女朋友奖状</h1>
+        
+        <h2 class="recipient">致我最爱的宝贝</h2>
+
+        <div class="content">
+            <p>周慧林同学：</p>
+            <p style="text-indent: 2em;">鉴于你在我们充满爱的关系中，始终表现出无与伦比的可爱、温柔与智慧，经“唯一爱你男友认证委员会”一致决定，特此授予你“宇宙无敌超级最佳女朋友”荣誉称号！</p>
+            <p>你荣获以下单项奖：</p>
+            <ul class="award-list">
+                <li>🏆 最迷人微笑奖</li>
+                <li>🏅 超级可爱奖</li>
+                <li>🎖️ 像一朵小花奖</li>
+            </ul>
+        </div>
+
+        <div class="prize-section">
+            <div class="prize-title">💌 专属奖金 💌</div>
+            <p>为了庆祝这一伟大时刻，请凭以下口令领取你的专属奖励：</p>
+            
+            <div class="alipay-command">[90744157]</div>
+            
+            <p class="alipay-instruction">（请打开 支付宝App -> 点击“红包” -> 选择“口令红包” -> 输入上方口令即可领取惊喜！）</p>
+        </div>
+
+    </div>
+
+    <script>
+        // 自动生成当天的日期
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1;
+        const day = today.getDate();
+        document.getElementById('award-date').textContent = `${year}年${month}月${day}日`;
+    </script>
+
+</body>
+</html>
